@@ -1,0 +1,128 @@
+/* Banner Styling */
+.banner {
+  background: url("./Image/Banner12.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+}
+
+.banner div {
+  position: relative;
+  z-index: 1;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn-warning {
+  background: linear-gradient(135deg, #ffcc00, #ff8800);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg, #ff8800, #ff5500);
+  transform: scale(1.05);
+}
+
+/* Product Cards */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Price and Add to Cart */
+.card .fw-bold {
+  font-size: 1.1rem;
+  color: #28a745;
+}
+
+.card .btn-sm {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1200px;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .row-cols-md-4 > .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .row-cols-md-4 > .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.nav-link-custom {
+  transition: all 0.3s ease-in-out;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.nav-link-custom:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
